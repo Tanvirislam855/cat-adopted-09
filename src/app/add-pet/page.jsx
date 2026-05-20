@@ -7,14 +7,22 @@ const AddPetPage= () => {
     const onSubmit = async (e) => {
         e.preventDefult()
         const formData = new FormData(e.currentTarget)
-        const destination =object.fromEntries(formData.entries())
-        console.log(destination)
-        const res = await fetch('http://http://localhost:3000/add-pet',{
+        const petData =Object.fromEntries(formData.entries())
+        console.log(petData)
+      //   const completeData = {
+      //   ...petData,
+      //   ownerId: user.id, 
+      //   ownerName: user.name, 
+      //   ownerEmail: user.email,
+      //   createdAt: new Date(),
+      //   sotck: 'Available',
+      // };
+        const res = await fetch('http://localhost:8000/add-pet',{
             method:'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(destination)
+            body: JSON.stringify(petData)
         })
         const data = await res.json()
         console.log(data)
@@ -22,17 +30,18 @@ const AddPetPage= () => {
     return (
         <div className='max-w-2xl mx-auto my-10 p-6 bg-white rounded-xl shadow-md items-center'>
             Add Pet
+            <form
+                onSubmit={onSubmit}>
 
-            <card>
-                <form
-                onSubmit={onSubmit}
-            className="p-10 space-y-8">
+            <Card className="p-10 space-y-8">
+                
+             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* pet Name */}
               <div className="md:col-span-2">
-                <TextField name="PetName" isRequired>
+                <TextField name="petName" isRequired>
                   <Label className='font-bold text-green-900'>Pet Name</Label>
-                  <Input placeholder="Enter pet name " className="rounded-2xl" />
+                  <Input placeholder="Enter pet name" className="rounded-2xl" />
                   <FieldError />
                 </TextField>
               </div>
@@ -60,7 +69,7 @@ const AddPetPage= () => {
                   <Select.Popover>
                     <ListBox>
                       <ListBox.Item id="Mammals" textValue="Mammals">
-                        Mammals
+                      Snake
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                       <ListBox.Item id="Birds" textValue="Birds">
@@ -72,11 +81,11 @@ const AddPetPage= () => {
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                       <ListBox.Item id="Amphibians" textValue="Amphibians">
-                        Amphibians
+                        Lion
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                       <ListBox.Item id="Invertebrates" textValue="Invertebrates">
-                        Invertebrates
+                        Dog
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                       <ListBox.Item id="Rabbits" textValue="Rabbits">
@@ -113,7 +122,7 @@ const AddPetPage= () => {
               <div className="md:col-span-2">
                 <TextField name="ratio" type="date" isRequired>
                   <Label className='font-bold text-green-900'>Gender</Label>
-                  <Input type="ratio" 
+                  <Input type="gender" 
                   placeholder="male / female"
                   className="rounded-2xl" />
                   <FieldError />
@@ -148,7 +157,7 @@ const AddPetPage= () => {
               <div className="md:col-span-2">
                 <TextField name="VaccinationStatus"  isRequired>
                   <Label className='font-bold text-green-900'>Vaccination Status</Label>
-                  <Input type="ratio" 
+                  <Input type="text" 
                   placeholder=" select Vaccination Status "
                   className="rounded-2xl" />
                   <FieldError />
@@ -159,7 +168,7 @@ const AddPetPage= () => {
               <div className="md:col-span-2">
                 <TextField name="Location"  isRequired>
                   <Label className='font-bold text-green-900'>Location</Label>
-                  <Input type="ratio" 
+                  <Input type="text" 
                   placeholder=" Enter Location "
                   className="rounded-2xl" />
                   <FieldError />
@@ -191,7 +200,7 @@ const AddPetPage= () => {
               <div className="md:col-span-2">
                 <TextField name="Owner Email (Auto-filled)"  isRequired>
                   <Label className='font-bold text-green-900'>Owner Email (Auto-filled)</Label>
-                  <Input type="ratio" 
+                  <Input type="text" 
                   placeholder=" Enter your mail "
                   className="rounded-2xl" />
                   <FieldError />
@@ -208,8 +217,9 @@ const AddPetPage= () => {
               className=" rounded-4xl w-full bg-emerald-950 text-white hover:bg-amber-300">
             Add Pet
             </Button>
-          </form>
-            </card>
+          
+            </Card>
+            </form>
         </div>
     );
 };
