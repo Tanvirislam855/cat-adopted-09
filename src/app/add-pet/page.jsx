@@ -20,68 +20,67 @@ const AddPetPage= () => {
         console.log(data)
     }
     return (
-        <div className='max-w-2xl mx-auto my-10 p-6 bg-white rounded-xl shadow-md'>
+        <div className='max-w-2xl mx-auto my-10 p-6 bg-white rounded-xl shadow-md items-center'>
             Add Pet
 
             <card>
                 <form
                 onSubmit={onSubmit}
-            className="p-10 space-y-8"
-          >
+            className="p-10 space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Destination Name */}
+              {/* pet Name */}
               <div className="md:col-span-2">
-                <TextField name="destinationName" isRequired>
-                  <Label>Destination Name</Label>
-                  <Input placeholder="Bali Paradise" className="rounded-2xl" />
+                <TextField name="PetName" isRequired>
+                  <Label className='font-bold text-green-900'>Pet Name</Label>
+                  <Input placeholder="Enter pet name " className="rounded-2xl" />
                   <FieldError />
                 </TextField>
               </div>
 
-              {/* Country */}
+              {/* Species-Maping
               <TextField name="country" isRequired>
                 <Label>Country</Label>
                 <Input placeholder="Indonesia" className="rounded-2xl" />
                 <FieldError />
-              </TextField>
+              </TextField> */}
 
-              {/* Category - Updated Select Component */}
+              {/* Species-Maping */}
               <div>
                 <Select
-                  name="category"
+                  name="species"
                   isRequired
                   className="w-full"
-                  placeholder="Select category"
+                  placeholder="Select species"
                 >
-                  <Label>Category</Label>
+                  <Label className='font-bold text-green-900'>species</Label>
                   <Select.Trigger className="rounded-2xl">
                     <Select.Value />
                     <Select.Indicator />
                   </Select.Trigger>
                   <Select.Popover>
                     <ListBox>
-                      <ListBox.Item id="Beach" textValue="Beach">
-                        Beach
+                      <ListBox.Item id="Mammals" textValue="Mammals">
+                        Mammals
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
-                      <ListBox.Item id="Mountain" textValue="Mountain">
-                        Mountain
+                      <ListBox.Item id="Birds" textValue="Birds">
+                        Birds
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
-                      <ListBox.Item id="City" textValue="City">
-                        City
+                      <ListBox.Item id="Fish" textValue="Fish">
+                       Fish
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
-                      <ListBox.Item id="Adventure" textValue="Adventure">
-                        Adventure
+                      <ListBox.Item id="Amphibians" textValue="Amphibians">
+                        Amphibians
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
-                      <ListBox.Item id="Cultural" textValue="Cultural">
-                        Cultural
+                      <ListBox.Item id="Invertebrates" textValue="Invertebrates">
+                        Invertebrates
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
-                      <ListBox.Item id="Luxury" textValue="Luxury">
-                        Luxury
+                      <ListBox.Item id="Rabbits" textValue="Rabbits">
+                        Rabbits
                         <ListBox.ItemIndicator />
                       </ListBox.Item>
                     </ListBox>
@@ -89,32 +88,34 @@ const AddPetPage= () => {
                 </Select>
               </div>
 
-              {/* Price */}
-              <TextField name="price" type="number" isRequired>
-                <Label>Price (USD)</Label>
+              {/* Breed */}
+              <TextField name="breed" type="number" isRequired>
+                <Label className='font-bold text-green-900'>Breed</Label>
                 <Input
-                  type="number"
-                  placeholder="1299"
+                  type="Enter breed (e.g. Biscut)"
+                  placeholder="Enter breed (e.g. Biscut)"
                   className="rounded-2xl"
                 />
                 <FieldError />
               </TextField>
 
-              {/* Duration */}
-              <TextField name="duration" isRequired>
-                <Label>Duration</Label>
+              {/* Age */}
+              <TextField name="age" isRequired>
+                <Label className='font-bold text-green-800'>Age</Label>
                 <Input
-                  placeholder="7 Days / 6 Nights"
+                  placeholder="5 month / 1 year"
                   className="rounded-2xl"
                 />
                 <FieldError />
               </TextField>
 
-              {/* Departure Date */}
+              {/* Gender */}
               <div className="md:col-span-2">
-                <TextField name="departureDate" type="date" isRequired>
-                  <Label>Departure Date</Label>
-                  <Input type="date" className="rounded-2xl" />
+                <TextField name="ratio" type="date" isRequired>
+                  <Label className='font-bold text-green-900'>Gender</Label>
+                  <Input type="ratio" 
+                  placeholder="male / female"
+                  className="rounded-2xl" />
                   <FieldError />
                 </TextField>
               </div>
@@ -122,27 +123,81 @@ const AddPetPage= () => {
               {/* Image URL - Removed preview */}
               <div className="md:col-span-2">
                 <TextField name="imageUrl" isRequired>
-                  <Label>Image URL</Label>
+                  <Label className='font-bold text-green-900'>Image URL</Label>
                   <Input
                     type="url"
-                    placeholder="https://example.com/bali-paradise.jpg"
+                    placeholder="https://example.com/pet.jpg"
                     className="rounded-2xl"
                   />
                   <FieldError />
                 </TextField>
               </div>
 
-              {/* Description */}
+              {/* Health status */}
               <div className="md:col-span-2">
                 <TextField name="description" isRequired>
-                  <Label>Description</Label>
+                  <Label className='font-bold text-green-900'>Health Status</Label>
                   <TextArea
-                    placeholder="Describe the travel experience..."
+                    placeholder="Select health status"
                     className="rounded-3xl"
                   />
                   <FieldError />
                 </TextField>
               </div>
+              {/* Vaccination Status */}
+              <div className="md:col-span-2">
+                <TextField name="VaccinationStatus"  isRequired>
+                  <Label className='font-bold text-green-900'>Vaccination Status</Label>
+                  <Input type="ratio" 
+                  placeholder=" select Vaccination Status "
+                  className="rounded-2xl" />
+                  <FieldError />
+                </TextField>
+              </div>
+              
+              {/* Location */}
+              <div className="md:col-span-2">
+                <TextField name="Location"  isRequired>
+                  <Label className='font-bold text-green-900'>Location</Label>
+                  <Input type="ratio" 
+                  placeholder=" Enter Location "
+                  className="rounded-2xl" />
+                  <FieldError />
+                </TextField>
+              </div>
+              {/* Adoption Fee */}
+              <div className="md:col-span-2">
+                <TextField name="Adoption Fee"  isRequired>
+                  <Label className='font-bold text-green-900'>Adoption Fee</Label>
+                  <Input type="number" 
+                  placeholder=" Adoption Fee (ERUO) "
+                  className="rounded-2xl" />
+                  <FieldError />
+                </TextField>
+              </div>
+              <div className="md:col-span-2">
+            <TextField name="description" isRequired>
+              <Label className="font-bold text-gray-700">Description</Label>
+              <TextArea
+                placeholder="write anything about the pet"
+                className="rounded-3xl"
+              />
+              <FieldError />
+            </TextField>
+          </div>
+        
+              
+              {/* Owner Email (Auto-filled) */}
+              <div className="md:col-span-2">
+                <TextField name="Owner Email (Auto-filled)"  isRequired>
+                  <Label className='font-bold text-green-900'>Owner Email (Auto-filled)</Label>
+                  <Input type="ratio" 
+                  placeholder=" Enter your mail "
+                  className="rounded-2xl" />
+                  <FieldError />
+                </TextField>
+              </div>
+
             </div>
 
             {/* Buttons */}
@@ -150,9 +205,7 @@ const AddPetPage= () => {
             <Button
               type="submit"
               variant="outline"
-           
-              className=" rounded-none w-full bg-cyan-500 text-white"
-            >
+              className=" rounded-4xl w-full bg-emerald-950 text-white hover:bg-amber-300">
             Add Pet
             </Button>
           </form>
