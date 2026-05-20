@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
         <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-                <Image src="/cat-adoption.png" alt="logo" width={40} height={40} className="dark:brightness-200" />
+                <Image src="/cat-adoption.png" alt="logo" width={40} height={40} className="h-auto w-auto" />
                 <h2 className="text-xl font-bold tracking-tight">CatAdopt</h2>
             </div>
             <p className="text-sm leading-relaxed text-gray-400 max-w-sm font-bold">

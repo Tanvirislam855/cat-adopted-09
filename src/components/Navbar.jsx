@@ -34,12 +34,12 @@ const Navbar = () => {
           <li>
             <Link href={"/All Pets"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100"> All Pets</Link>
           </li>
-          {/* <li>
-            <Link href={"/My Request"}>My Request</Link>
+           <li>
+            <Link href={"/My Request"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">My Request</Link>
           </li>
           <li>
-            <Link href={"/add pet"}>Add Pet</Link>
-          </li> */}
+            <Link href={"/add-pet"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">Add Pet</Link>
+          </li> 
         </ul>
 
         <div className="flex justify-between gap-4">
