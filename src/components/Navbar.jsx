@@ -29,13 +29,13 @@ const Navbar = () => {
 
         <ul className="flex  items-center gap-10  text-sm">
           <li>
-            <Link href={"/"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold text-shadow-black hover:bg-blue-100">Home</Link>
+            <Link href={"/home"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold text-shadow-black hover:bg-blue-100">Home</Link>
           </li>
           <li>
-            <Link href={"/All Pets"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100"> All Pets</Link>
+            <Link href={"/all-pets"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100"> All Pets</Link>
           </li>
            <li>
-            <Link href={"/My Request"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">My Request</Link>
+            <Link href={"/my-request"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">My Request</Link>
           </li>
           <li>
             <Link href={"/add-pet"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">Add Pet</Link>

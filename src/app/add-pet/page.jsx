@@ -5,7 +5,7 @@ import { TextField,Label,Input,FieldError,Select,ListBox,TextArea,Button, Card }
 
 const AddPetPage= () => {
     const onSubmit = async (e) => {
-        e.preventDefult()
+        e.preventDefault()
         const formData = new FormData(e.currentTarget)
         const petData =Object.fromEntries(formData.entries())
         console.log(petData)
