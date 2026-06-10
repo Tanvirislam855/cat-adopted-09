@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <ul className="flex  items-center gap-10  text-sm">
           <li>
-            <Link href={"/home"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold text-shadow-black hover:bg-blue-100">Home</Link>
+            <Link href={"/"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold text-shadow-black hover:bg-blue-100">Home</Link>
           </li>
           <li>
             <Link href={"/all-pets"} className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100"> All Pets</Link>
