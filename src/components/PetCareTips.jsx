@@ -1,7 +1,13 @@
 'use client';
 import React from 'react';
-import { FaBowlFood, FaDumbbell, FaStethoscope, FaPaw } from 'react-icons/fa6';
-import { MdSecurity, MdPets, MdFavorite } from 'react-icons/md';
+import { FaDumbbell, FaStethoscope,} from 'react-icons/fa6';
+import { MdHealthAndSafety } from "react-icons/md";
+
+import { IoHomeSharp } from 'react-icons/io5';
+import { SiRescuetime } from "react-icons/si";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { MdFavorite } from "react-icons/md";
+
 import { motion } from 'framer-motion'; 
 
 const PetCareTips = () => {
@@ -9,9 +15,9 @@ const PetCareTips = () => {
     {
       title: 'Balanced Diet',
       desc: 'Feed high-quality, nutritious meals tailored to your pets needs.'
-      icon: <FaBowlFood />,
-      color: 'text-orange-400',
-      glow: 'shadow-[0_0_15px_rgba(251,146,60,0.3)]',
+    //  icon:  <PiHoodieThin/>,
+    //    color: 'text-orange-400',
+    //    glow: 'shadow-[0_0_15px_rgba(251,146,60,0.3)]',
     },
     {
       title: 'Active Lifestyle',
@@ -23,7 +29,7 @@ const PetCareTips = () => {
     {
       title: 'Preventive Care',
       desc: 'Schedule routine vet visits and vaccinations to ensure lifelong wellness.',
-      icon: <FaStethoscope />,
+      icon: <MdHealthAndSafety />,
       color: 'text-pink-400',
       glow: 'shadow-[0_0_15px_rgba(244,114,182,0.3)]',
     },
@@ -31,30 +37,30 @@ const PetCareTips = () => {
 
   const partners = [
     {
-      name: 'Happy Paws',
+      name: 'FurEver Home',
       type: 'Shelter',
-      icon: <FaPaw />,
+      icon: <IoHomeSharp />,
       color: 'text-blue-400',
       bg: 'bg-blue-500/10',
     },
     {
-      name: 'Safe Haven',
+      name: 'Rescue Angels',
       type: 'Pet Rescue',
-      icon: <MdSecurity />,
+      icon: <SiRescuetime />,
       color: 'text-purple-400',
       bg: 'bg-purple-500/10',
     },
     {
-      name: 'Paws & Claws',
+      name: 'Greencat Trust',
       type: 'Foundation',
-      icon: <MdPets />,
+      icon: <VscWorkspaceTrusted />,
       color: 'text-green-400',
       bg: 'bg-green-500/10',
     },
     {
-      name: 'Love Animals',
+      name: 'Hopeful Tails',
       type: 'Shelter',
-      icon: <MdFavorite />,
+      icon:<MdFavorite />,
       color: 'text-red-400',
       bg: 'bg-red-500/10',
     },
@@ -116,7 +122,7 @@ const PetCareTips = () => {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C084FC] transition-colors">
                   {tip.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-[220px] opacity-80">
+                <p className="text-gray-400 text-sm leading-relaxed max-w-55 opacity-80">
                   {tip.desc}
                 </p>
               </motion.div>
