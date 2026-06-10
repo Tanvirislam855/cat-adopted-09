@@ -8,21 +8,21 @@ const PetCareTips = () => {
   const careTips = [
     {
       title: 'Balanced Diet',
-      desc: 'Provide nutritious food for your pet.',
+      desc: 'Feed high-quality, nutritious meals tailored to your pets needs.'
       icon: <FaBowlFood />,
       color: 'text-orange-400',
       glow: 'shadow-[0_0_15px_rgba(251,146,60,0.3)]',
     },
     {
-      title: 'Regular Exercise',
-      desc: 'Keep your pet active and healthy.',
+      title: 'Active Lifestyle',
+      desc: 'Keep them energized with daily walks, playtime, and mental stimulation.',
       icon: <FaDumbbell />,
       color: 'text-purple-400',
       glow: 'shadow-[0_0_15px_rgba(192,132,252,0.3)]',
     },
     {
-      title: 'Health Check',
-      desc: 'Regular vet check is important.',
+      title: 'Preventive Care',
+      desc: 'Schedule routine vet visits and vaccinations to ensure lifelong wellness.',
       icon: <FaStethoscope />,
       color: 'text-pink-400',
       glow: 'shadow-[0_0_15px_rgba(244,114,182,0.3)]',
