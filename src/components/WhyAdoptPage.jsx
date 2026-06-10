@@ -51,16 +51,14 @@ const WhyAdoptPage = () => {
               className="space-y-6 mb-12 max-w-md mx-auto md:mx-0"
             >
               <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed opacity-90">
-                Every year, thousands of pets are left homeless. By adopting,
-                you aren&apos;t just giving them a home—you&apos;re giving them
-                a second chance at life.
+                "Every pet deserves a safe place to call home. When you adopt, you aren't just welcoming a companion into your life—you are rewriting a beautiful story of rescue and unconditional love."
               </p>
 
               {/* check list */}
               <div className="flex flex-col gap-3 items-center md:items-start text-gray-300">
                 {[
-                  'Save a life and find a best friend',
-                  'Unconditional love guaranteed',
+                  'Give a lonely pet the forever home they deserve',
+                  'Create an unbreakable bond of loyalty and joy',
                 ].map((text, i) => (
                   <motion.div
                     key={i}
@@ -78,28 +76,28 @@ const WhyAdoptPage = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#FF4D8D] to-[#F27121] hover:opacity-90 text-white px-12 py-5 rounded-2xl font-black text-xl shadow-xl shadow-pink-500/20 transition-all uppercase tracking-wide"
+              className="bg-linear-to-r from-[#FF4D8D] to-[#F27121] hover:opacity-90 text-white px-12 py-5 rounded-2xl font-black text-xl shadow-xl shadow-pink-500/20 transition-all uppercase tracking-wide"
             >
               Learn More
             </motion.button>
           </div>
 
           {/* right side image */}
-          <div className="relative z-10 w-full md:w-1/2 h-full flex items-end justify-center md:justify-end mt-10 md:mt-0 px-4 md:px-0 self-end">
+          <div className="relative z-10 w-full md:w-1/2 h-full flex items-center justify-center md:justify-end mt-10 md:mt-0 px-4 md:px-0">
             <div className="absolute bottom-0 right-0 w-full h-[80%] bg-orange-500/10 blur-[100px] rounded-full"></div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative w-100 sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-square flex items-end leading-[0]"
+              className="relative w-100 sm:w-100 md:w-125 lg:w-150 aspect-square flex items-center leading-0"
             >
               <Image
-                src="/assets/dogAndCat-removebg-preview.png"
+                src="/manadopt.png"
                 alt="Cute Dog"
                 width={800}
                 height={800}
-                className="object-contain object-bottom drop-shadow-[0_10px_50px_rgba(0,0,0,0.3)]"
+                className="object-contain object-center drop-shadow-[0_10px_50px_rgba(0,0,0,0.3)]"
                 priority
               />
 
@@ -113,7 +111,7 @@ const WhyAdoptPage = () => {
                 }}
                 className="absolute top-[20%] left-[-10%] hidden lg:block"
               >
-                <span className="text-4xl opacity-30 inline-block">✨</span>
+               
               </motion.div>
 
               {/* floating paw */}
@@ -126,9 +124,7 @@ const WhyAdoptPage = () => {
                 }}
                 className="absolute bottom-20 left-0 hidden lg:block"
               >
-                <span className="text-3xl rotate-20d inline-block text-pink-400">
-                  🐾
-                </span>
+               
               </motion.div>
             </motion.div>
           </div>
