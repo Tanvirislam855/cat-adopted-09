@@ -3,13 +3,14 @@ import { authClient } from "@/lib/auth-client";
 // import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar,Button } from "@heroui/react";
 
 const Navbar = () => {
-  const {
- data : session,
-} = authClient.useSession()
-  const user = session?.user
-console.log(user)
+  const {data : session } = authClient.useSession();
+  const user = session?.user;
+ const handleSignOut = async () => {
+    await authClient.signOut();
+  };
 
 
 
@@ -42,18 +43,43 @@ console.log(user)
             <Link href={"/add-pet"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">Add Pet</Link>
           </li> 
         </ul>
+        <ul className="flex items-center gap-3">
+        <li>
+          <Link href={"/profile"}className="flex items-center gap-2 px-4 py-2 bg-lime-700 text-lime-950 rounded-full font-bold hover:bg-blue-100">Profile</Link>
+        </li>
 
-        <div className="flex justify-between gap-4">
+        {user ? (
+          <>
+            <li>
+              <Avatar>
+                <Avatar.Image referrerPolicy="no-referrer" alt="John Doe" src={user?.image} />
+                <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
+            </li>
+            <li>
+              <Button size="sm" onClick={handleSignOut} variant="danger" className={"rounded-2xl"}>
+                Logout
+              </Button>
+            </li>
+          </>
+        ) : (
+          <>
+          
+
         
-            <ul className="flex items-center  text-sm gap-5">
+        
+            
               <li>
                 <Link href={"/signup"} className="flex items-center gap-2 px-4 py-2 bg-amber-700 text-black rounded-full font-bold text-shadow-black hover:bg-blue-100">SignUp</Link>
               </li>
               <li>
                 <Link href={"/signin"} className="flex items-center gap-2 px-4 py-2 bg-green-500 text-black rounded-full font-bold text-shadow-black hover:bg-blue-100">SignIn</Link>
               </li>
+               </>
+               )}
             </ul>
-        </div>
+        
+        
       </nav>
     </div>
   );

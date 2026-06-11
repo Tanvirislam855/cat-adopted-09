@@ -5,6 +5,8 @@ import React from 'react';
 import { redirect } from "next/navigation";
 import { Card } from '@heroui/react';
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+import { Separator } from '@heroui/react';
+import { FcGoogle } from "react-icons/fc";
 
 const SignUpPage = () => {
   const onSubmit = async (e) => {
@@ -25,8 +27,13 @@ const SignUpPage = () => {
     if (error){
        alert("Error");
     }
-   
   };
+  const handleGoogleSignin = async() => {
+    await authClient.signIn.social({
+        provider: "google"
+    })
+
+  }
   return (
     <div className='max-w-5xl mx-auto'>
       <div className='text-center'>
@@ -98,6 +105,14 @@ const SignUpPage = () => {
         
       </div>
     </Form>
+    <div className="flex justify-center items-center gap-3">
+            <Separator/>
+           <div className="whitespace-nowrap"> Or sign up with </div>
+              <Separator/>
+            </div>
+        <div>
+            <Button onClick={handleGoogleSignin} variant="outline" className={'w-full rounded-2xl'}><FcGoogle /> Sign in with Google</Button>
+        </div>
       </Card>
     </div>
   );
