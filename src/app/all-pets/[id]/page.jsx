@@ -1,3 +1,5 @@
+
+import BookCard from "@/components/BookCard";
 import Image from "next/image";
 
 const DetailsPage = async ({ params }) => {
@@ -77,9 +79,12 @@ const DetailsPage = async ({ params }) => {
             <span className="text-3xl font-black text-[#ec4899]">${adoptionfee || allpets["Adoption Fee"]}</span>
           </div>
 
-          <button className="rounded-xl bg-linear-to-r from-[#8b5cf6] to-[#ec4899] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90">
-            Proceed to Adopt
-          </button>
+          <div className="text-black font-extrabold">
+          <BookCard allpets ={allpets}/>
+          </div>
+             
+          
+          
         </div>
 
       </div>
