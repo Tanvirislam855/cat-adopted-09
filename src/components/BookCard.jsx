@@ -5,6 +5,7 @@ import { DateField } from '@heroui/react';
 import { Label } from '@heroui/react';
 import { useState } from 'react';
 import { authClient } from '@/lib/auth-client';
+import toast from 'react-hot-toast';
 
 
 const BookCard = ({allpets}) => {
@@ -31,6 +32,7 @@ const BookCard = ({allpets}) => {
         })
         const result = await res.json();
         console.log(result)
+        toast.success("Your Booking Successfully")
 
         
 
