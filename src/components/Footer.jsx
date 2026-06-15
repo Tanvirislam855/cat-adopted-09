@@ -4,8 +4,8 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-24">
-      <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+    <footer className="bg-[#1e293b] mt-0 mb-0 relative z-10 ">
+      <div className="pt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
       <div className="absolute inset-0 -z-10 bg-gray-700 dark:bg-[#0a0a0b]" />
       <div
         className="absolute inset-0 -z-10 bg-linear-to-tr 

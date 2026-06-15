@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { FaDumbbell, FaStethoscope,} from 'react-icons/fa6';
+import { FaDumbbell,} from 'react-icons/fa6';
 import { MdHealthAndSafety } from "react-icons/md";
-
 import { IoHomeSharp } from 'react-icons/io5';
 import { SiRescuetime } from "react-icons/si";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
@@ -15,9 +14,7 @@ const PetCareTips = () => {
     {
       title: 'Balanced Diet',
       desc: 'Feed high-quality, nutritious meals tailored to your pets needs.'
-    //  icon:  <PiHoodieThin/>,
-    //    color: 'text-orange-400',
-    //    glow: 'shadow-[0_0_15px_rgba(251,146,60,0.3)]',
+    
     },
     {
       title: 'Active Lifestyle',
@@ -80,7 +77,7 @@ const PetCareTips = () => {
   };
 
   return (
-    <section className="bg-[#050211] py-16 space-y-12 overflow-hidden">
+    <section className="bg-gray-800 py-16 space-y-12 overflow-hidden">
       <div className="container mx-auto px-4 md:px-12">
         {/* pet care tips */}
         <motion.div
@@ -88,15 +85,14 @@ const PetCareTips = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-[#120D26]/60 backdrop-blur-xl rounded-[40px] p-10 md:p-16 border border-white/5 shadow-2xl"
+          className="bg-cyan-100 backdrop-blur-xl rounded-[40px] p-10 md:p-16 border border-white/5 shadow-2xl"
         >
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-black text-white mb-16 text-center md:text-left"
-          >
-            Pet Care <span className="text-[#C084FC]">Tips</span>
+            className="text-2xl md:text-4xl font-black text-black mb-16 text-center md:text-left">
+            Pet Care <span className="text-blue-900">Tips</span>
           </motion.h2>
 
           <motion.div
@@ -104,8 +100,7 @@ const PetCareTips = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10"
-          >
+            className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10">
             {careTips.map((tip, index) => (
               <motion.div
                 key={index}
@@ -115,14 +110,14 @@ const PetCareTips = () => {
                 {/* icon box */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 10 }}
-                  className={`w-20 h-20 rounded-full flex items-center justify-center mb-6 bg-black/40 border border-white/10 transition-all duration-500 ${tip.glow}`}
+                  className={`w-20 h-20 rounded-full flex items-center justify-center mb-6 bg-amber-500 border border-gray-700 transition-all duration-500 ${tip.glow}`}
                 >
                   <span className={`${tip.color} text-3xl`}>{tip.icon}</span>
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C084FC] transition-colors">
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-green-950 transition-colors">
                   {tip.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-55 opacity-80">
+                <p className="text-black text-sm leading-relaxed max-w-55 opacity-80 font-extrabold">
                   {tip.desc}
                 </p>
               </motion.div>
@@ -136,10 +131,10 @@ const PetCareTips = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-12 bg-[#120D26]/40 backdrop-blur-md rounded-[40px] p-10 border border-white/5"
+          className="mt-12 bg-amber-950 backdrop-blur-md rounded-[40px] p-10 border border-white/5"
         >
-          <h2 className="text-xl md:text-3xl font-black text-white mb-12">
-            Shelter <span className="text-[#E879F9]">Partners</span>
+          <h2 className="text-xl md:text-3xl font-black text-black mb-12">
+            Shelter <span className="text-emerald-900">Partners</span>
           </h2>
 
           <motion.div

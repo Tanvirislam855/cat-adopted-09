@@ -9,28 +9,22 @@ const stories = [
     id: 1,
     userName: 'Masum Ali',
     petName: 'rakib (Cat)',
-    image:
-      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop',
     text: "I was nervous about adopting my first pup, but PetNest guided me every step of the way. Reo has completely transformed my days!",
-    rating: 5,
+    rating: 3,
   },
   {
     id: 2,
     userName: 'Sakib Sorker',
     petName: 'rifat (cat)',
-    image:
-      'https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop',
     text: "The matching process on PetNest is incredible. We found Max, and it feels like he’s been a part of our family forever.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: 3,
     userName: 'Sadman Islam',
     petName: 'Rashed (cat)',
-    image:
-      'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=1887&auto=format&fit=crop',
     text: "Highly recommend catadop! Finding and adopting Bella was completely hassle-free, and she's pure joy.",
-    rating: 5,
+    rating: 4,
   },
 ];
 
@@ -53,7 +47,7 @@ const SuccessStory = () => {
   };
 
   return (
-    <section className="bg-[#050211] py-20 overflow-hidden">
+    <section className="bg-[#050211] -mt-1 py-20 pb-10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-12">
         {/* Section Header */}
         <motion.div
@@ -87,7 +81,7 @@ const SuccessStory = () => {
               key={story.id}
               variants={itemVariants}
               whileHover={{ y: -10 }} 
-              className="bg-[#120D26]/60 backdrop-blur-xl border border-white/5 p-8 rounded-[32px] relative group"
+              className="bg-black backdrop-blur-xl border border-white/5 p-8 rounded-[32px] relative group"
             >
               {/* quote icon */}
               <div className="absolute top-6 right-8 text-white/5 group-hover:text-[#C084FC]/20 transition-colors duration-500">
@@ -106,16 +100,8 @@ const SuccessStory = () => {
                 &quot;{story.text}&quot;
               </p>
 
-              {/* user info */}
+            
               <div className="flex items-center gap-4 border-t border-white/5 pt-6">
-                <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/10">
-                  <Image
-                    src={story.image}
-                    alt={story.userName}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
                 <div>
                   <h4 className="text-white font-bold">{story.userName}</h4>
                   <p className="text-[#C084FC] text-xs font-black uppercase tracking-wider">
