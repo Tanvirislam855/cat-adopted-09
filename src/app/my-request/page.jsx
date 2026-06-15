@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
 import { Button } from '@heroui/react';
+import { BookingCancelAlert } from '@/components/BookingCancelAlert';
 
 const MyRequestPage = async () => { 
     const session = await auth.api.getSession({
@@ -12,7 +13,7 @@ const MyRequestPage = async () => {
     const user = session?.user;
     const res = await fetch(`http://localhost:8000/book/${user?.id}`)
     const request = await res.json()
-    console.log(request)
+    // console.log(request)
     return (
         <div className='max-w-7xl mx-auto text-center'>
             <h1 className='text-3xl font-bold'>My Request</h1>
@@ -35,7 +36,8 @@ const MyRequestPage = async () => {
         day: "numeric"
     })}
 </p>
-<Button className={" rounded-2xl text-red-600 border-red-700"} variant="outline"><TrashBin/> cancle</Button>
+<BookingCancelAlert bookId ={book._id} />
+
    
            </div>
         </div>
