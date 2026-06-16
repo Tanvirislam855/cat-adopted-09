@@ -6,7 +6,7 @@ import {AlertDialog, Button} from "@heroui/react";
 
 export function BookingCancelAlert({bookId}) {
     const handleCancelBook = async() =>{
-        const res = await fetch (`http://localhost:8000/book/${bookId}`,{
+        const res = await fetch (`${process.env.NEXT_PUBLIC_SERVER_URL}/book/${bookId}`,{
              method: "DELETE",
              headers: {
             "content-type": "application/json"
@@ -22,7 +22,7 @@ export function BookingCancelAlert({bookId}) {
      <Button className={" rounded-2xl text-red-600 border-red-700"} variant="outline"><TrashBin/> cancle</Button>
       <AlertDialog.Backdrop>
         <AlertDialog.Container>
-          <AlertDialog.Dialog className="sm:max-w-[400px]">
+          <AlertDialog.Dialog className="sm:max-w-100">
             <AlertDialog.CloseTrigger />
             <AlertDialog.Header>
               <AlertDialog.Icon status="danger" />

@@ -17,7 +17,7 @@ const AddPetPage= () => {
       //   createdAt: new Date(),
       //   sotck: 'Available',
       // };
-        const res = await fetch('http://localhost:8000/add-pet',{
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}./add-pet`,{
             method:'POST',
             headers: {
                 'content-type': 'application/json'

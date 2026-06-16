@@ -11,7 +11,7 @@ const MyRequestPage = async () => {
         headers: await headers()
     })
     const user = session?.user;
-    const res = await fetch(`http://localhost:8000/book/${user?.id}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/book/${user?.id}`)
     const request = await res.json()
     // console.log(request)
     return (

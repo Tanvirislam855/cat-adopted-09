@@ -23,7 +23,7 @@ const BookCard = ({allpets}) => {
             allpetsName,price,imageUrl,location,adoptedDate:new Date(adoptedDate)
 
         }
-        const res = await fetch('http://localhost:8000/book',{
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/book`,{
             method: "POST",
             headers: {
                 'content-type':"application/json"

@@ -1,7 +1,8 @@
+
 import React from 'react';
 import AllPetsCard from '@/components/all-petsCard.jsx';
 const AllPetsPage = async () => {
-    const res = await fetch('http://localhost:8000/all-pets')
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/all-pets`)
     const allPets = await res.json()
     console.log(allPets)
 
