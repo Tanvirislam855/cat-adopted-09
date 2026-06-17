@@ -11,7 +11,7 @@ const AllPetsPage = async () => {
             <h1>All Pets</h1>
             <div className='grid grid-cols-6 gap-5'>
                 {
-                    allPets.map(pet => <AllPetsCard key={pet._id} allpetsCard={pet} />)
+                    allPets.map(pet => <AllPetsCard key={pet._id} pet={pet} />)
                         
                 }
             </div>

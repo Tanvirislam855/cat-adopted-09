@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { LuMapPin } from "react-icons/lu";
 import Link from "next/link";
-const allpetsCard = ({allpetsCard}) => {
-    const {_id,imageUrl,location,gender,age,petName,adoptionfee} = allpetsCard
+const AllPetsCard = ({pet}) => {
+  console.log (pet)
+    const {_id,imageUrl,location,gender,age,petName,adoptionfee} = pet;
     return (
         <div className="border ">
             <Image
@@ -11,7 +12,7 @@ const allpetsCard = ({allpetsCard}) => {
            height={400}
            width={400}
            unoptimized
-            />
+           />
             <div className="p-2">
               
         <div className="flex items-center gap-1">
@@ -37,4 +38,4 @@ const allpetsCard = ({allpetsCard}) => {
     );
 };
 
-export default allpetsCard;
+export default AllPetsCard;
