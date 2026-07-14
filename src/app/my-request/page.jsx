@@ -12,6 +12,8 @@ const MyRequestPage = async () => {
     })
     const user = session?.user;
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/book/${user?.id}`)
+
+    
     const request = await res.json()
     // console.log(request)
     return (

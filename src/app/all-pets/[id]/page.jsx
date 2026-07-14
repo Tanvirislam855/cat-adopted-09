@@ -1,14 +1,23 @@
 
 import BookCard from "@/components/BookCard";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import Image from "next/image";
 
 const DetailsPage = async ({ params }) => {
 
   const { id } = await params;
+  //  const {token} = await auth.api.getToken({
+  //    headers: await headers()
+  //  })
+  //  console.log(token)
 
   
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/all-pets/${id}`, {
-    cache: 'no-store'
+    headers:{
+      authorization: "logged in"
+    },
+     cache: 'no-store'
   });
   
  
