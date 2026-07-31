@@ -14,3 +14,79 @@ Pet owners-ra tader dashboard-e shei request gulo review kore instantly Approve 
  
    🛠️ Tech Stack ArchitectureFrontend Ecosystem:
     Next.js 16 (App Router) orchestration framework application-ti toiri. Interface styling-er jonno use kora hoyeche dynamic Tailwind CSS 4. Fast form controls validation run hoy React Hook Form diye.  Backend & Database: Core database logic handle korar jonno use kora hoyeche MongoDB Native Driver. Server-side environment handle korche Node.js ebong Express.js framework, ar token encryption-er jonno dynamic package jose (JWT) use kora hoyeche.  
+
+    ## Tech Stack
+
+| Package | Purpose |
+| :--- | :--- |
+| **Next.js** | React framework with App Router |
+| **React** | UI library |
+| **Better Auth** | Authentication (email/password) |
+| **MongoDB** | Database |
+| **Tailwind CSS** | Utility-first CSS framework |
+| **Framer Motion** | Animations |
+### Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+BETTER_AUTH_SECRET=your_better_auth_secret
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+```
+
+### Installation
+
+```bash
+npm install
+npm run dev
+```
+### Project Structure
+
+```text
+src/
+├── app/          # Next.js App Router pages and layouts
+├── components/   # Reusable UI components
+├── lib/          # Utilities, API clients, server actions
+└── hooks/        # Custom React hooks
+```
+# PetAdopted — Full-Stack Pet Adoption Platform
+
+A modern, full-stack pet adoption platform designed to connect homeless pets with loving homes. Featuring secure authentication, dynamic pet listings, and seamless user management.
+
+
+
+## Live Site
+🔗 [https://pet-adopted.vercel.app](https://pet-adopted.vercel.app)
+
+---
+
+## Features
+* User authentication & session management
+* Dynamic pet listings with categories and filtering
+* Responsive & modern user interface
+* User dashboard for adoption requests
+
+---
+
+## Tech Stack
+
+| Package | Purpose |
+| :--- | :--- |
+| **Next.js** | React framework with App Router |
+| **React** | UI library |
+| **JWT** | Authentication & Security |
+| **Tailwind CSS** | Utility-first CSS framework |
+
+---
+
+## Getting Started
+
+### Prerequisites
+* Node.js 18+
+* MongoDB instance
+
+### Installation
+```bash
+npm install
+npm run dev
