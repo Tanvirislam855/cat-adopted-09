@@ -32,7 +32,6 @@ Create a `.env.local` file in the root directory with the following variables:
 ```env
 MONGODB_URI=your_mongodb_connection_string
 BETTER_AUTH_SECRET=your_better_auth_secret
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 ```
 
 ### Installation
