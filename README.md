@@ -1,3 +1,5 @@
+<img width="1470" height="704" alt="Screenshot 2026-07-31 at 4 44 20 PM" src="https://github.com/user-attachments/assets/e58ca412-93b9-429d-bc58-545d64d51cce" />
+<img width="1470" height="537" alt="Screenshot 2026-07-31 at 4 43 43 PM" src="https://github.com/user-attachments/assets/851caf6b-31e7-4cce-8ef3-666ddc72ca19" />
 PetAdopted – Project Overview:
 
 PetAdopted hocche akta modern, full-stack pet adoption platform. Er main purpose hocche asha-jawa ba ashroyhin pashu-der (pets) tader permanent loving home-er sathe connect kore deya. Users-ra khub shojei pashu browse ebong adoption request submit korte parben, ar pet owners ba shelters-ra tader complete dashboard theke listings ebong workflows manage korte parben. 
